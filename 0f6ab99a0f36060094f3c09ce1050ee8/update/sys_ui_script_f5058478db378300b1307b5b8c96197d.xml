@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Allow UI Context Menus to open a prebuilt script for admins to use in Xplore</description>
+        <global>true</global>
+        <name>snd_xplore_shortcuts</name>
+        <script><![CDATA[/**
+ * Allow UI Context Menus to open a prebuilt script for admins to use in Xplore.
+ *
+ * Thanks to Jim Coyne for the original version of this.
+ * https://community.servicenow.com/community/develop/blog/2016/06/10/xplore-gliderecord-script-tool
+ */
+var snd_xplore_shortcuts = {};
+
+/**
+ * Open the list query in Xplore.
+ *
+ */
+snd_xplore_shortcuts.openQuery = function openQuery() {
+	var query = ('' + g_list.getFixedQuery()).replace('null', '');
+	if (query == '') {
+		query = ('' + g_list.getRelatedQuery()).replace('null', '');
+	}
+
+	var user_query = '' + g_list.getQuery();
+	if (user_query) {
+		query = query ? '^' + user_query : user_query;
+	}
+
+	var newline = '\n';
+	var script = 'function run() {' + newline;
+	script += '    var gr = new GlideRecord(\'' + g_list.tableName + '\');' + newline;
+	if (query) {
+		// Ensure single quotes in the query are escaped in the generated script
+		query = query.replace(/'/g, '\\\'');
+		script += '    gr.addEncodedQuery(\'' + query + '\');' + newline;
+	}
+	script += '    //gr.orderBy(\'name\');' + newline;
+	script += '    //gr.setLimit(100);' + newline;
+	script += '    //gr.setWorkflow(false);' + newline;
+	script += '    //gr.autoSysFields(false);' + newline;
+	script += '    gr.query();' + newline;
+	script += '    ' + newline;
+	script += '    var log = [];' + newline;
+	script += '    while (gr.next()) {' + newline;
+	script += '        log.push(gr.getDisplayValue());' + newline;
+	script += '        ' + newline;
+	script += '    }' + newline;
+	script += '    return log;' + newline;
+	script += '}' + newline;
+	script += 'run();';
+
+	snd_xplore_shortcuts.open(script);
+};
+
+/**
+ * Open the single Record in Xplore.
+ *
+ */
+snd_xplore_shortcuts.openRecord = function openRow() {
+	var newline = '\n';
+	var script = 'var gr = new GlideRecord(\'' + g_list.tableName + '\');' + newline;
+	script += 'gr.get(\'' + g_sysId + '\');' + newline;
+	script += 'gr;';
+
+	snd_xplore_shortcuts.open(script);
+};
+
+/**
+ * Open a new Xplore window and set the script.
+ *
+ */
+snd_xplore_shortcuts.open = function open(script) {
+	// open Xplore in a new window
+	var win = window.open('/snd_xplore.do');
+
+	// when Xplore has loaded, set the script
+	jQuery(win).bind('load', function(){
+		win.snd_xplore_editor.setValue(script);
+	});
+};]]></script>
+        <script_name/>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>james@sharelogic.com</sys_created_by>
+        <sys_created_on>2018-01-18 20:27:26</sys_created_on>
+        <sys_id>f5058478db378300b1307b5b8c96197d</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>snd_xplore_shortcuts</sys_name>
+        <sys_package display_value="Xplore: Developer Toolkit" source="0f6ab99a0f36060094f3c09ce1050ee8">0f6ab99a0f36060094f3c09ce1050ee8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Xplore: Developer Toolkit">0f6ab99a0f36060094f3c09ce1050ee8</sys_scope>
+        <sys_update_name>sys_ui_script_f5058478db378300b1307b5b8c96197d</sys_update_name>
+        <sys_updated_by>james@sharelogic.com</sys_updated_by>
+        <sys_updated_on>2020-11-25 15:21:26</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

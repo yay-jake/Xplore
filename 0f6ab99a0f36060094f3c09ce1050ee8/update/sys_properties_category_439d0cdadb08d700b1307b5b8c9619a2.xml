@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Xplore Settings</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>james@sharelogic.com</sys_created_by>
+        <sys_created_on>2018-02-04 23:10:52</sys_created_on>
+        <sys_id>439d0cdadb08d700b1307b5b8c9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Xplore Settings</sys_name>
+        <sys_package display_value="Xplore: Developer Toolkit" source="0f6ab99a0f36060094f3c09ce1050ee8">0f6ab99a0f36060094f3c09ce1050ee8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Xplore: Developer Toolkit">0f6ab99a0f36060094f3c09ce1050ee8</sys_scope>
+        <sys_update_name>sys_properties_category_439d0cdadb08d700b1307b5b8c9619a2</sys_update_name>
+        <sys_updated_by>james@sharelogic.com</sys_updated_by>
+        <sys_updated_on>2018-02-04 23:10:52</sys_updated_on>
+        <title/>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=439d0cdadb08d700b1307b5b8c9619a2"/>
+</record_update>

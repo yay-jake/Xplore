@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>The number of Xplore sessions to automatically store for historic backup per person. Default is 50.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>snd_xplore.history.limit</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>james@sharelogic.com</sys_created_by>
+        <sys_created_on>2021-01-19 22:20:58</sys_created_on>
+        <sys_id>c33775fddbb5a410d78869091396199d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>snd_xplore.history.limit</sys_name>
+        <sys_package display_value="Xplore: Developer Toolkit" source="0f6ab99a0f36060094f3c09ce1050ee8">0f6ab99a0f36060094f3c09ce1050ee8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Xplore: Developer Toolkit">0f6ab99a0f36060094f3c09ce1050ee8</sys_scope>
+        <sys_update_name>sys_properties_c33775fddbb5a410d78869091396199d</sys_update_name>
+        <sys_updated_by>james@sharelogic.com</sys_updated_by>
+        <sys_updated_on>2021-01-20 21:55:07</sys_updated_on>
+        <type>integer</type>
+        <value>50</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=c33775fddbb5a410d78869091396199d"/>
+</record_update>

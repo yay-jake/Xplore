@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.snd_Xplore_code</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>This script is deliberately empty. It's used to workaround a new feature in
+Istanbul Patch 4 that requires a real record to be passed to GlideScopedEvaluator.</description>
+        <name>snd_Xplore_code</name>
+        <script><![CDATA[/**
+ * This script is deliberately empty. It's used to workaround a new feature in
+ * Istanbul Patch 4 that requires a real record to be passed to GlideScopedEvaluator.
+ */]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>james@sharelogic.com</sys_created_by>
+        <sys_created_on>2017-05-15 16:23:00</sys_created_on>
+        <sys_id>ef324e340f7efe0094f3c09ce1050ecf</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>snd_Xplore_code</sys_name>
+        <sys_package display_value="Xplore: Developer Toolkit" source="0f6ab99a0f36060094f3c09ce1050ee8">0f6ab99a0f36060094f3c09ce1050ee8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Xplore: Developer Toolkit">0f6ab99a0f36060094f3c09ce1050ee8</sys_scope>
+        <sys_update_name>sys_script_include_ef324e340f7efe0094f3c09ce1050ecf</sys_update_name>
+        <sys_updated_by>james@sharelogic.com</sys_updated_by>
+        <sys_updated_on>2017-05-20 22:21:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

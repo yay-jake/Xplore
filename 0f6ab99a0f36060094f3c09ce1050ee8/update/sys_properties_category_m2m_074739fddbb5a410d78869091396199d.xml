@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Xplore Settings">439d0cdadb08d700b1307b5b8c9619a2</category>
+        <order>200</order>
+        <property display_value="snd_xplore.history.limit" name="snd_xplore.history.limit">c33775fddbb5a410d78869091396199d</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>james@sharelogic.com</sys_created_by>
+        <sys_created_on>2021-01-19 22:21:14</sys_created_on>
+        <sys_id>074739fddbb5a410d78869091396199d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>snd_xplore.history.limit.Xplore Settings</sys_name>
+        <sys_package display_value="Xplore: Developer Toolkit" source="0f6ab99a0f36060094f3c09ce1050ee8">0f6ab99a0f36060094f3c09ce1050ee8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Xplore: Developer Toolkit">0f6ab99a0f36060094f3c09ce1050ee8</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_074739fddbb5a410d78869091396199d</sys_update_name>
+        <sys_updated_by>james@sharelogic.com</sys_updated_by>
+        <sys_updated_on>2021-01-19 22:21:30</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>
